@@ -1,0 +1,47 @@
+{
+  "name": "meetup",
+  "version": "1.0.0",
+  "description": "Meetup Website Clone",
+  "main": "server.js",
+  "repository": "https://github.com/collinstheuncoder/meetup.git",
+  "author": "Collins Orlando <collinstheuncoder@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "server": "nodemon --exec babel-node server/src/server.js",
+    "client": "cd client && yarn serve",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "prebuild": "rm -rf server/dist",
+    "build-babel": "babel -d ./server/dist ./server/src -s",
+    "build": "yarn build-babel",
+    "start": "node server/build/server.js",
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn build && cd client && yarn && yarn build"
+  },
+  "dependencies": {
+    "apollo-server": "^2.3.2",
+    "apollo-server-express": "^2.3.2",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "graphql-resolvers": "^0.3.2",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.6",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  }
+}
