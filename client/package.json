@@ -9,7 +9,6 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-<<<<<<< HEAD
     "apollo-cache-inmemory": "^1.4.2",
     "apollo-client": "^2.4.12",
     "apollo-link": "^1.2.6",
@@ -21,9 +20,7 @@
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
     "luxon": "^1.10.0",
-=======
     "onclick-outside": "^0.1.1",
->>>>>>> layout
     "vue": "^2.5.21",
     "vue-apollo": "^3.0.0-beta.27",
     "vue-datetime": "^1.0.0-beta.10",
