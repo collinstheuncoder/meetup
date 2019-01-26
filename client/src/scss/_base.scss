@@ -1,0 +1,8 @@
+.page {
+	width: 100%;
+	padding: 1rem;
+
+	@include largeDevices {
+		padding: 2rem;
+	}
+}

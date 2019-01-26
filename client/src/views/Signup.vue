@@ -1,5 +1,5 @@
 <template>
-  <div class="signup page">
+  <div class="page page--signup">
     <h2 class="heading-two">Sign Up</h2>
     
     <p class="show-signup" v-show="!isFormRendered" @click="renderForm">
@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/style";
 
-.signup {
+.page--signup {
   width: 25rem;
   margin: 0 auto 2rem;
   padding: 0 1rem;
