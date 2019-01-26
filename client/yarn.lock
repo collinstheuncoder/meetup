@@ -6347,6 +6347,11 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
+onclick-outside@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/onclick-outside/-/onclick-outside-0.1.1.tgz#0ad1722342dabf1cd62ffce374f182b2bef1f62f"
+  integrity sha1-CtFyI0LavxzWL/zjdPGCsr7x9i8=
+
 onetime@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
