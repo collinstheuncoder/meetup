@@ -75,7 +75,9 @@ export const footerLinks = [
 
 // Current location promise
 export function getCurrentLocation() {
-  return axios.get("http://ipinfo.io");
+  return axios.get("http://ipinfo.io")
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
 }
 
 // Vuex actions success/failure handlers

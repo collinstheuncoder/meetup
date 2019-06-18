@@ -1,12 +1,12 @@
 <template>
-  <div class="page page--signup">
+  <div class="signup page">
     <h2 class="heading-two">Sign Up</h2>
-    
+    <social-login />
     <p class="show-signup" v-show="!isFormRendered" @click="renderForm">
       Or sign up with email
     </p>
     <hr class="divider" v-show="isFormRendered" />
-
+    <signup-form v-show="isFormRendered" />
     <hr class="divider" />
     <p class="login">
       Already a member? <router-link to="/accounts/login">Log in</router-link>.
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-// import SignupForm from "@/components/accounts/SignupForm";
-// import SocialLogin from "@/components/shared/SocialLogin";
+import SignupForm from "@/components/accounts/SignupForm";
+import SocialLogin from "@/components/shared/SocialLogin";
 
 export default {
-  // components: {
-  //   SignupForm,
-  //   SocialLogin
-  // },
+  components: {
+    SignupForm,
+    SocialLogin
+  },
   data() {
     return {
       isFormRendered: false
@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/style";
 
-.page--signup {
+.signup {
   width: 25rem;
   margin: 0 auto 2rem;
   padding: 0 1rem;
