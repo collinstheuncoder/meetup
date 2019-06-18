@@ -5,6 +5,10 @@ const meetupFields = {
       path: 'addedBy',
       select: 'fullname id',
     },
+    {
+      path: 'details.hostedBy',
+      select: 'fullname id',
+    }
   ],
 }
 

@@ -1,15 +1,15 @@
 import { getCurrentLocation } from "../helpers";
 
-const currentLocation = {};
+const token = localStorage.getItem("meetup-token");
+
+const cache = new InMemoryCache();
+
+let currentLocation;
 
 (async () => {
-  const {
-    data: { city, region, country, loc }
-  } = await getCurrentLocation();
+  const resp = await getCurrentLocation();
 
-  currentLocation.name = `${city}, ${region}, ${country}`;
-  currentLocation.latitude = loc.slice(0, loc.indexOf(","));
-  currentLocation.longitude = loc.slice(loc.indexOf(",") + 1);
+  currentLocation = resp;
 })();
 
 const state = {

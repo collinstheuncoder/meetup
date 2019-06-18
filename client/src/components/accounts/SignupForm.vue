@@ -17,7 +17,7 @@
       />
     </transition>
     <form class="form" @submit.prevent="createAccount">
-       <div class="form-fullname">
+      <div class="form-fullname">
         <div class="form__grp form__grp--firstname">
           <label class="form__label" for="name"
             >Your firstname (this is public)</label
@@ -52,7 +52,7 @@
           name="email"
           v-model="email"
         />
-      </div> 
+      </div>
       <div class="form__grp">
         <label class="form__label" for="password">Password</label>
         <input
@@ -132,7 +132,7 @@ export default {
           // Save token to browser storage
           localStorage.setItem("meetup-token", token);
 
-          // Clear form fields 
+          // Clear form fields
           this.firstname = "";
           this.lastname = "";
           this.email = "";

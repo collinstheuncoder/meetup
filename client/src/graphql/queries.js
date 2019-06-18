@@ -12,14 +12,14 @@ export const currentLocation = gql`
   }
 `;
 
- export const authStatus = gql`
-   query AuthStatus {
-     authStatus @client {
-       isAuthenticated
-       currentUser  
-     }
-   }
- `;
+export const authStatus = gql`
+  query AuthStatus {
+    authStatus @client {
+      isAuthenticated
+      currentUser
+    }
+  }
+`;
 
 /*** Server side/remote queries ***/
 export const fetchAllUsers = gql`

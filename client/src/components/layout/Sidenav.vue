@@ -13,23 +13,23 @@
                 Start a new group
               </router-link>
             </li>
-            <li 
-              v-if="!isAuthenticated" 
-              class="nav__item nav__item--auth" 
+            <li
+              v-if="!isAuthenticated"
+              class="nav__item nav__item--auth"
               @click="hideSideNav"
             >
               <router-link to="/accounts/login">Log in</router-link>
             </li>
-            <li 
-              v-if="!isAuthenticated" 
-              class="nav__item nav__item--auth" 
+            <li
+              v-if="!isAuthenticated"
+              class="nav__item nav__item--auth"
               @click="hideSideNav"
             >
               <router-link to="/accounts/signup">Sign up</router-link>
             </li>
-            <li 
-              v-if="isAuthenticated" 
-              class="nav__item nav__item--auth" 
+            <li
+              v-if="isAuthenticated"
+              class="nav__item nav__item--auth"
               @click="hideSideNav"
             >
               <router-link
@@ -39,9 +39,9 @@
                 Explore
               </router-link>
             </li>
-            <li 
-              v-if="isAuthenticated" 
-              class="nav__item nav__item--auth" 
+            <li
+              v-if="isAuthenticated"
+              class="nav__item nav__item--auth"
               @click="hideSideNav"
             >
               <router-link :class="{ authNav: isAuthenticated }" to="/messages">

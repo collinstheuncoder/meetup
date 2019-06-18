@@ -1,42 +1,42 @@
 import { gql } from 'apollo-server-express';
 
 export default gql`
-	type User {
-		id: ID!
-		fullname: String!
-		firstname: String!
-		lastname: String!
-		email: String!
-		addedMeetups: [Meetup]!
-		hostedMeetups: [Meetup]!
-		attendedMeetups: [Meetup]!
-		attending: [Meetup]!
-		token: String
-	}
-	
-	extend type Query {
-		allUsers: [User]!
-	  userById(userId: ID!): User!
-	  currentUser: User!
-	}
+  type User {
+    id: ID!
+    fullname: String!
+    firstname: String!
+    lastname: String!
+    email: String!
+    addedMeetups: [Meetup]!
+    hostedMeetups: [Meetup]!
+    attendedMeetups: [Meetup]!
+    attending: [Meetup]!
+    token: String
+  }
 
-	input UserUpdateInput {
-		firstname: String
-		lastname: String
-	  email: String
-	  userId: ID!
-	}
+  extend type Query {
+    allUsers: [User]!
+    userById(userId: ID!): User!
+    currentUser: User!
+  }
 
-	input ChangePasswordInput {
-	  email: String!
-	  oldPassword: String!
-	  newPassword: String!
-	}
+  input UserUpdateInput {
+    firstname: String
+    lastname: String
+    email: String
+    userId: ID!
+  }
 
-	extend type Mutation {
-		updateUserInfo(input: UserUpdateInput!): User!
-		updatePassword(input: ChangePasswordInput!): Boolean!
-		deleteAccount(id: ID!): Boolean!
-		removeUser(id: ID!): Boolean! #Admin only
-	}
-`
+  input ChangePasswordInput {
+    email: String!
+    oldPassword: String!
+    newPassword: String!
+  }
+
+  extend type Mutation {
+    updateUserInfo(input: UserUpdateInput!): User!
+    updatePassword(input: ChangePasswordInput!): Boolean!
+    deleteAccount(id: ID!): Boolean!
+    removeUser(id: ID!): Boolean! #Admin only
+  }
+`;

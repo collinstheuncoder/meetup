@@ -32,8 +32,10 @@ export default {
       async (parent, args, { models: { Meetup, User } }, info) => {
         try {
           // Save new meetup to DB
-          const newMeetup = await Meetup.create(args);
-
+          let newMeetup = await Meetup.create(args);
+                    
+          newMeetup = await newMeetup.populate(populate.meetup).execPopulate();
+          
           // Update current user's [addedMeetups]
           await User.findByIdAndUpdate(args.addedBy, {
             $push: { addedMeetups: newMeetup.id },

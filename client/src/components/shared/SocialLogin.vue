@@ -1,12 +1,14 @@
 <template>
-	<div class="button-grp">
-		<button class="button button--facebook">
-			<span class="button-icon"><i class="fab fa-facebook-f"></i></span> <span class="button-text">Continue with Facebook</span>
-		</button>
-		<button class="button button--google">
-			<span class="button-icon"><i class="fab fa-google"></i></span> <span class="button-text">Continue with Google</span>
-		</button>
-	</div>
+  <div class="button-grp">
+    <button class="button button--facebook">
+      <span class="button-icon"><i class="fab fa-facebook-f"></i></span>
+      <span class="button-text">Continue with Facebook</span>
+    </button>
+    <button class="button button--google">
+      <span class="button-icon"><i class="fab fa-google"></i></span>
+      <span class="button-text">Continue with Google</span>
+    </button>
+  </div>
 </template>
 
 <script>
