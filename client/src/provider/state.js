@@ -7,18 +7,22 @@ const token = localStorage.getItem("meetup-token");
 
 const cache = new InMemoryCache();
 
-getCurrentLocation()
-  .then(res => console.log(res))
-  .catch(err => console.error(err));
+let currentLocation = {};
+
+(async () => {
+  const resp = await getCurrentLocation();
+
+  currentLocation = resp;
+})();
 
 const stateLink = withClientState({
   cache,
   defaults: {
     currentLocation: {
       __typename: "CurrentLocation",
-      name: "",
-      latitude: "",
-      longitude: ""
+      name: currentLocation.name,
+      latitude: currentLocation.latitude,
+      longitude: currentLocation.longitude
     },
     authStatus: {
       __typename: "AuthStatus",

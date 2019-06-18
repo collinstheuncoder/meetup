@@ -74,10 +74,16 @@ export const footerLinks = [
 ];
 
 // Current location promise
-export function getCurrentLocation() {
-  return axios.get("http://ipinfo.io")
-    .then(res => console.log(res))
-    .catch(err => console.error(err));
+export async function getCurrentLocation() {
+  const { data: { city, region, country, loc } } = await axios.get(`https://ipinfo.io?token=${process.env.VUE_APP_IPINFO_TOKEN}`);
+    
+  const currentLocation = {
+    name: `${city}, ${region} (${country})`,
+    latitude: Number(loc.slice(0, loc.indexOf(","))),
+    longitude: Number(loc.slice(loc.indexOf(",") + 1))
+  }
+      
+  return currentLocation;
 }
 
 // Vuex actions success/failure handlers

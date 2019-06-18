@@ -2,21 +2,24 @@ import gql from "graphql-tag";
 
 /*** Client side/local queries ***/
 
-export const fetchCurrentLocation = gql`
+export const currentLocation = gql`
   query CurrentLocation {
     currentLocation @client {
-      location
+      name
+      latitude
+      longitude
     }
   }
 `;
 
-// export const currentUser = gql`
-//   query CurrentUser {
-//     currentUser @client {
-//       token
-//     }
-//   }
-// `;
+ export const authStatus = gql`
+   query AuthStatus {
+     authStatus @client {
+       isAuthenticated
+       currentUser  
+     }
+   }
+ `;
 
 /*** Server side/remote queries ***/
 export const fetchAllUsers = gql`
