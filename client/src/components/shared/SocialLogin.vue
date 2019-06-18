@@ -29,7 +29,6 @@ $fcbk-color: #3b5998;
 }
 
 .button {
-  max-width: 25rem;
   padding: 0.5rem;
   height: 2.5rem;
   text-align: left;
