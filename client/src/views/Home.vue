@@ -4,11 +4,9 @@
     <home-navigation />
     <suggested /> 
     <explore />
-    <!-- <how-it-works /> -->
-<!--
+    <how-it-works /> 
     <get-app />
     <home-footer />
--->
   </div>
 </template>
 
@@ -17,9 +15,9 @@ import Header from "@/components/home/Header";
 import Navigation from "@/components/home/Navigation";
 import Suggested from "@/components/home/Suggested";
 import Explore from "@/components/home/Explore";
-//import HowItWorks from "@/components/home/HowItWorks";
-//import GetApp from "@/components/home/GetApp";
-//import Footer from "@/components/home/Footer";
+import HowItWorks from "@/components/home/HowItWorks";
+import GetApp from "@/components/home/GetApp";
+import Footer from "@/components/home/Footer";
 
 export default {
   components: {
@@ -27,9 +25,9 @@ export default {
     homeNavigation: Navigation,
     Suggested,
     Explore,
-//    HowItWorks,
-//    GetApp,
-//    homeFooter: Footer
+    HowItWorks,
+    GetApp,
+    homeFooter: Footer
   }
 };
 </script>
