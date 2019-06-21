@@ -24,8 +24,7 @@
 </template>
 
 <script>
-//import SearchLocation from "../shared/SearchLocation";
-import QueryHandler from "../../shared/QueryHandler";
+import SearchLocation from "../../shared/SearchLocation";
 
 import { currentLocation } from "../../../graphql/queries";
 
@@ -34,8 +33,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "meetup-location",
   components: {
-    //    SearchLocation
-    QueryHandler
+    SearchLocation
   },
   props: {
     addMeetupInfo: {

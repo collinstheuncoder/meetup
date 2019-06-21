@@ -2,14 +2,14 @@ import { getCurrentLocation } from "../helpers";
 
 const token = localStorage.getItem("meetup-token");
 
-const cache = new InMemoryCache();
-
-let currentLocation;
+const currentLocation = {};
 
 (async () => {
-  const resp = await getCurrentLocation();
-
-  currentLocation = resp;
+  const { name, latitude, longitude } = await getCurrentLocation();
+    
+  currentLocation.name = name; 
+  currentLocation.latitude = latitude;
+  currentLocation.longitude = longitude;
 })();
 
 const state = {
