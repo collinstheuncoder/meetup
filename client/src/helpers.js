@@ -12,22 +12,22 @@ export const links = [
 
 // Meetup categories list
 export const categories = [
-  { name: "Outdoors & Adventure", path: "/outdoors", imgUrl: "outdoors" },
-  { name: "Arts", path: "/arts", imgUrl: "arts" },
-  { name: "LGBTQ", path: "/lgbtq", imgUrl: "lgbtq" },
-  { name: "Family", path: "/family", imgUrl: "family" },
-  { name: "Photography", path: "/photography", imgUrl: "photography" },
-  { name: "Movements", path: "/movements", imgUrl: "movements" },
-  { name: "Tech", path: "/tech", imgUrl: "tech" },
-  { name: "Writing", path: "/writing", imgUrl: "writing" },
-  { name: "Food & Drinks", path: "/food-drinks", imgUrl: "food" },
-  { name: "Music", path: "/music", imgUrl: "music" },
-  { name: "Sci-fi & Games", path: "/scifi", imgUrl: "scifi" },
-  { name: "Language & Culture", path: "/language-culture", imgUrl: "language" },
-  { name: "Sports & Fitness", path: "/sports-fitness", imgUrl: "fitness" },
-  { name: "Health & Wellness", path: "/health-wellness", imgUrl: "health" },
-  { name: "Films", path: "/films", imgUrl: "films" },
-  { name: "Learning", path: "/learning", imgUrl: "learning" }
+  { name: "Outdoors & Adventure", path: "/outdoors", imgUrl: "https://imgur.com/9H4mdql.jpg" },
+  { name: "Arts", path: "/arts", imgUrl: "https://imgur.com/tO2KO2b.jpg" },
+  { name: "LGBTQ", path: "/lgbtq", imgUrl: "https://imgur.com/RTV1Zvn.jpg" },
+  { name: "Family", path: "/family", imgUrl: "https://imgur.com/MciyzkP.jpg" },
+  { name: "Photography", path: "/photography", imgUrl: "https://imgur.com/KVhZHIM.jpg" },
+  { name: "Movements", path: "/movements", imgUrl: "https://imgur.com/4VRnXqP.jpg" },
+  { name: "Tech", path: "/tech", imgUrl: "https://imgur.com/bGQKVhD.jpg" },
+  { name: "Writing", path: "/writing", imgUrl: "https://imgur.com/6j8WDKV.jpg" },
+  { name: "Food & Drinks", path: "/food-drinks", imgUrl: "https://imgur.com/B4fOz3K.jpg" },
+  { name: "Music", path: "/music", imgUrl: "https://imgur.com/58nko8L.jpg" },
+  { name: "Sci-fi & Games", path: "/scifi", imgUrl: "https://imgur.com/RRgvdl5.jpg" },
+  { name: "Language & Culture", path: "/language-culture", imgUrl: "https://imgur.com/wux8FgQ.jpg" },
+  { name: "Sports & Fitness", path: "/sports-fitness", imgUrl: "https://imgur.com/Og2uiOo.jpg" },
+  { name: "Health & Wellness", path: "/health-wellness", imgUrl: "https://imgur.com/nvuq6kD.jpg" },
+  { name: "Films", path: "/films", imgUrl: "https://imgur.com/IneW9Hy.jpg" },
+  { name: "Learning", path: "/learning", imgUrl: "https://imgur.com/6RKKMKe.jpg" }
 ];
 
 export const menuItems = [
