@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <home-header />
-<!--
     <home-navigation />
     <suggested /> 
+    <!--
     <explore />
 -->
     <!-- <how-it-works /> -->
@@ -13,11 +13,11 @@
 -->
   </div>
 </template>
- 
+
 <script>
 import Header from "@/components/home/Header";
-//import Navigation from "@/components/home/Navigation";
-//import Suggested from "@/components/home/Suggested";
+import Navigation from "@/components/home/Navigation";
+import Suggested from "@/components/home/Suggested";
 //import Explore from "@/components/home/Explore";
 //import HowItWorks from "@/components/home/HowItWorks";
 //import GetApp from "@/components/home/GetApp";
@@ -26,8 +26,8 @@ import Header from "@/components/home/Header";
 export default {
   components: {
     homeHeader: Header,
-//    homeNavigation: Navigation,
-//    Suggested,
+    homeNavigation: Navigation,
+    Suggested,
 //    Explore,
 //    HowItWorks,
 //    GetApp,
