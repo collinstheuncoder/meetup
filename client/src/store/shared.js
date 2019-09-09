@@ -1,7 +1,5 @@
 import { getCurrentLocation } from "../helpers";
 
-const token = localStorage.getItem("meetup-token");
-
 const currentLocation = {};
 
 (async () => {

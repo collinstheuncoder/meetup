@@ -26,8 +26,6 @@
 <script>
 import SearchLocation from "../../shared/SearchLocation";
 
-import { currentLocation } from "../../../graphql/queries";
-
 import { mapGetters } from "vuex";
 
 export default {
