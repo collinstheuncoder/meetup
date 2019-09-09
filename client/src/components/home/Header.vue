@@ -2,7 +2,7 @@
   <div class="home-header">
     <h1 class="heading-one">What do you love?</h1>
     <p class="paragraph">Do more of it with Meetup</p>
-    <router-link v-show="isAuthenticated" class="button" to="/accounts/signup"
+    <router-link v-show="!isAuthenticated" class="button" to="/accounts/signup"
       >Sign up</router-link
     >
   </div>
@@ -63,7 +63,7 @@ export default {
   @include mediumDevices {
     font-size: 1.25rem;
     font-weight: 500;
-    margin-top: 2rem;  
+    margin-top: 2rem;
   }
 
   @include largeDevices {

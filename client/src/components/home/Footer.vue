@@ -108,7 +108,7 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
+
   @include largeDevices {
     flex-direction: row;
   }
@@ -116,11 +116,11 @@ export default {
 
 .column {
   flex-basis: 100%;
-  
+
   @include mediumDevices {
     flex-basis: 30%;
   }
-  
+
   &--menu {
     display: flex;
     justify-content: space-between;
@@ -129,7 +129,7 @@ export default {
   &--buttons {
     .row {
       flex-direction: row;
-      
+
       &--btn-grp {
         display: flex;
         justify-content: flex-end;
@@ -158,7 +158,7 @@ export default {
           transition: 250ms all ease;
         }
       }
-      
+
       &--app-links {
         margin-top: 1.25rem;
       }
@@ -171,10 +171,10 @@ export default {
   color: darken($white-color, 35%);
   cursor: pointer;
 }
-  
+
 .icon {
   padding: 0 0 0 4rem;
-  
+
   &:first-of-type {
     padding: 0;
     margin-right: -0.35rem;
@@ -200,7 +200,7 @@ export default {
     display: none;
   }
 }
-  
+
 .app-link {
   max-width: 10rem;
 
@@ -212,7 +212,7 @@ export default {
     padding-left: 0.5rem;
   }
 }
-  
+
 .svg-inline--fa {
   font-size: 1.5rem;
   color: darken($white-color, 35%);

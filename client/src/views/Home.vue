@@ -2,9 +2,9 @@
   <div class="home">
     <home-header />
     <home-navigation />
-    <suggested /> 
+    <suggested />
     <explore />
-    <how-it-works /> 
+    <how-it-works />
     <get-app />
     <home-footer />
   </div>

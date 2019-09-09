@@ -2,9 +2,12 @@
   <div class="explore">
     <h2 class="heading-two">Explore by category</h2>
     <div class="categories">
-      <router-link 
-        :to="{path: `find${category.path}`}"
-        v-for="category in categories" 
+      <router-link
+        :to="{
+          name: 'find-meetups',
+          params: { type: category.path.slice(1), name: category.name }
+        }"
+        v-for="category in categories"
         :key="category.name"
         class="category"
         :style="{ backgroundImage: `url(${category.imgUrl})` }"
@@ -48,7 +51,7 @@ export default {
   font-size: 1.5rem;
   margin-top: 0;
   color: lighten($text-color, 40%);
-  
+
   @include mediumDevices {
     margin-top: 1.25rem;
   }
@@ -74,7 +77,7 @@ export default {
   border-radius: 0.35rem;
   background-position: center center;
   background-size: cover;
-  
+
   &-name {
     position: absolute;
     left: 1rem;
@@ -88,7 +91,7 @@ export default {
   @include largeDevices {
     height: 12.5rem;
   }
-  
+
   &:hover * {
     color: $link-color;
   }

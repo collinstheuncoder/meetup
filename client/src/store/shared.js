@@ -6,8 +6,8 @@ const currentLocation = {};
 
 (async () => {
   const { name, latitude, longitude } = await getCurrentLocation();
-    
-  currentLocation.name = name; 
+
+  currentLocation.name = name;
   currentLocation.latitude = latitude;
   currentLocation.longitude = longitude;
 })();

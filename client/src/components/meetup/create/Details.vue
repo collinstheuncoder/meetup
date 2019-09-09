@@ -112,184 +112,184 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../../scss/style";
 
 .meetup-description {
   display: flex;
-}
 
-.image {
-  width: 2rem;
-  align-self: flex-start;
+  .image {
+    width: 2rem;
+    align-self: flex-start;
 
-  @include mediumDevices {
-    width: 3rem;
-  }
-}
-
-.description {
-  margin-left: 2rem;
-  width: 100%;
-
-  &--step,
-  &--list,
-  &--show-examples,
-  &--examples {
-    font-size: 0.85rem;
+    @include mediumDevices {
+      width: 3rem;
+    }
   }
 
-  &--meetup-name,
-  &--meetup-desc,
-  &--meetup-image input {
+  .description {
+    margin-left: 2rem;
     width: 100%;
-    background-color: lighten($text-color, 95%);
-    padding: 0.25rem;
-    padding-left: 1rem;
-    box-shadow: none;
-    border: 1px solid lighten($text-color, 90%);
 
-    &:focus,
-    &:hover {
-      background-color: transparent;
-      outline: none;
-    }
-  }
-
-  &--heading {
-    color: lighten($text-color, 30%);
-    margin: 0;
-    padding: 0.5rem 0;
-
-    @include mediumDevices {
-      font-size: 1.5rem;
-      margin: 1rem 0;
-    }
-
-    @include largeDevices {
-      font-size: 1.75rem;
-    }
-  }
-
-  &--step {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    color: lighten($text-color, 80%);
-
-    @include mediumDevices {
+    &--step,
+    &--list,
+    &--show-examples,
+    &--examples {
       font-size: 0.85rem;
     }
-  }
 
-  &--meetup-name,
-  &--meetup-image input {
-    height: 2rem;
-  }
+    &--meetup-name,
+    &--meetup-desc,
+    &--meetup-image input {
+      width: 100%;
+      background-color: lighten($text-color, 95%);
+      padding: 0.25rem;
+      padding-left: 1rem;
+      box-shadow: none;
+      border: 1px solid lighten($text-color, 90%);
 
-  &--input {
-    margin-right: 1.5rem;
-
-    @include mediumDevices {
-      margin-right: 0;
+      &:focus,
+      &:hover {
+        background-color: transparent;
+        outline: none;
+      }
     }
-  }
 
-  &--show-examples {
-    span {
-      color: $link-color;
-      cursor: pointer;
-    }
-  }
-
-  &--examples {
-    background-color: lighten($text-color, 80%);
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 0.65rem;
-    margin-bottom: 1rem;
-    width: 100%;
-
-    @at-root .example {
-      flex-basis: 30%;
-    }
-  }
-
-  &--meetup-desc {
-    overflow: hidden;
-    resize: none;
-  }
-
-  &--meetup-image {
-    margin-top: 1rem;
-
-    label {
-      font-weight: 600;
+    &--heading {
       color: lighten($text-color, 30%);
-    }
-
-    input {
-      margin-top: 0.5rem;
-    }
-  }
-
-  &--meetup-dates {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 1rem;
-
-    @include mediumDevices {
-      flex-direction: row;
-    }
-
-    @at-root .date-grp {
-      flex-basis: 100%;
       margin: 0;
+      padding: 0.5rem 0;
 
       @include mediumDevices {
-        flex-basis: 50%;
+        font-size: 1.5rem;
+        margin: 1rem 0;
       }
 
-      &:first-child {
-        @include mediumDevices {
-          margin-left: 0;
-        }
+      @include largeDevices {
+        font-size: 1.75rem;
       }
+    }
+
+    &--step {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: lighten($text-color, 80%);
+
+      @include mediumDevices {
+        font-size: 0.85rem;
+      }
+    }
+
+    &--meetup-name,
+    &--meetup-image input {
+      height: 2rem;
+    }
+
+    &--input {
+      margin-right: 1.5rem;
+
+      @include mediumDevices {
+        margin-right: 0;
+      }
+    }
+
+    &--show-examples {
+      span {
+        color: $link-color;
+        cursor: pointer;
+      }
+    }
+
+    &--examples {
+      background-color: lighten($text-color, 80%);
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 0.65rem;
+      margin-bottom: 1rem;
+      width: 100%;
+
+      @at-root .example {
+        flex-basis: 30%;
+      }
+    }
+
+    &--meetup-desc {
+      overflow: hidden;
+      resize: none;
+    }
+
+    &--meetup-image {
+      margin-top: 1rem;
 
       label {
         font-weight: 600;
         color: lighten($text-color, 30%);
       }
+
+      input {
+        margin-top: 0.5rem;
+      }
+    }
+
+    &--meetup-dates {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      @include mediumDevices {
+        flex-direction: row;
+      }
+
+      @at-root .date-grp {
+        flex-basis: 100%;
+        margin: 0;
+
+        @include mediumDevices {
+          flex-basis: 50%;
+        }
+
+        &:first-child {
+          @include mediumDevices {
+            margin-left: 0;
+          }
+        }
+
+        label {
+          font-weight: 600;
+          color: lighten($text-color, 30%);
+        }
+      }
+    }
+
+    &--button {
+      background-color: $main-color;
+      padding: 0.5rem 2rem;
+      border: none;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1rem 0;
+      cursor: pointer;
+
+      &:focus,
+      &:hover {
+        background-color: darken($main-color, 5%);
+        outline: none;
+      }
     }
   }
 
-  &--button {
-    background-color: $main-color;
-    padding: 0.5rem 2rem;
-    border: none;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 1rem 0;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-      background-color: darken($main-color, 5%);
-      outline: none;
-    }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
   }
-}
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
 }
 
 .event-datetime {

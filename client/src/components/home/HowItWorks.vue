@@ -40,7 +40,7 @@ export default {
     ...mapGetters({ isAuthenticated: "auth/isAuthenticated" })
   }
 };
-</script> 
+</script>
 
 <style lang="scss" scoped>
 @import "../../scss/style";
@@ -64,11 +64,11 @@ export default {
 }
 
 .row {
-  margin-right: 0; 
-  margin-left: 0; 
+  margin-right: 0;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
-  
+
   @include mediumDevices {
     flex-direction: row;
   }

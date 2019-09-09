@@ -3,9 +3,12 @@
     <template v-for="link in links">
       <router-link
         class="meetup-link"
-        :to="`find${link.path}`"
+        :to="{
+          name: 'find-meetups',
+          params: { type: link.path.slice(1), name: link.name }
+        }"
         :key="link.name"
-        >{{ link.name }}</router-link
+        >{{ link.label }}</router-link
       >
     </template>
   </div>
@@ -43,7 +46,7 @@ export default {
     border-radius: 0.25rem;
     color: darken($white-color, 70%);
     font-size: 0.85rem;
-    margin: 0 0.5rem; 
+    margin: 0 0.5rem;
 
     &:first-child {
       margin-left: 0;

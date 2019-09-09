@@ -30,7 +30,9 @@ const router = new Router({
       path: "/attend",
       name: "attend-meetup",
       component: () =>
-        import(/* webpackChunkName: "attend-meetup" */ "./views/AttendMeetup.vue"),
+        import(
+          /* webpackChunkName: "attend-meetup" */ "./views/AttendMeetup.vue"
+        ),
       meta: {
         title: "Meetup | Attend Meetup",
         metaTags: [
@@ -49,7 +51,9 @@ const router = new Router({
       path: "/find/:type",
       name: "find-meetups",
       component: () =>
-        import(/* webpackChunkName: "found-meetups" */ "./views/FindMeetups.vue"),
+        import(
+          /* webpackChunkName: "find-meetups" */ "./views/FindMeetups.vue"
+        ),
       props: true,
       meta: {
         title: "Meetup | Find Meetups",
@@ -69,7 +73,9 @@ const router = new Router({
       path: "/group/:name",
       name: "meetup-group",
       component: () =>
-        import(/* webpackChunkName: "meetup-group" */ "./views/MeetupGroup.vue"),
+        import(
+          /* webpackChunkName: "meetup-group" */ "./views/MeetupGroup.vue"
+        ),
       meta: {
         title: "Meetup | Meetup Group",
         metaTags: [
@@ -88,7 +94,9 @@ const router = new Router({
       path: "/create",
       name: "create-meetup",
       component: () =>
-        import(/* webpackChunkName: "create-meetup" */ "./views/CreateMeetup.vue"),
+        import(
+          /* webpackChunkName: "create-meetup" */ "./views/CreateMeetup.vue"
+        ),
       meta: {
         title: "Meetup | Create Meetup",
         metaTags: [

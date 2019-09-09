@@ -36,16 +36,15 @@ export default {
 }
 
 .login-card {
-  min-width: 100%;
+  width: 100%;
   background-color: $white-color;
 
   @include mediumDevices {
-    min-width: 20rem;
+    width: 30rem;
     margin: 1.5rem;
   }
 
   @include largeDevices {
-    min-width: 25rem;
     margin: 2rem;
   }
 }
