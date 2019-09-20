@@ -12,13 +12,15 @@
         :key="meetup"
         class="meetup"
         :style="{ background }"
-      >
-        <p class="meetup-info">
-          <span class="meetup-name">Learn Data Science</span>
-          <br />
-          <span class="meetup-members">14321 members</span>
-        </p>
-        <i @click="openModal" class="fas fa-plus meetup-icon"></i>
+      > 
+        <router-link to="/group/groupname">
+          <p class="meetup-info">
+            <span class="meetup-name">Learn Data Science</span>
+            <br />
+            <span class="meetup-members">14321 members</span>
+          </p>
+          <i @click="openModal" class="fas fa-plus meetup-icon"></i>
+        </router-link>
       </div>
     </div>
     <modal v-show="isModalOpen" @close="closeModal" />

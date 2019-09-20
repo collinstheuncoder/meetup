@@ -1,155 +1,155 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
 
 Vue.use(Router);
 
+function metaTags(pageName) {
+  return [
+    {
+      name: 'description',
+      content: `The ${pageName} page of the Meetup App`,
+    },
+    {
+      property: 'og:description',
+      content: `The ${pageName} page of the Meetup App`,
+    },
+  ];
+}
+
 const router = new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      name: 'home',
       component: Home,
       meta: {
-        title: "Meetup | Home",
-        metaTags: [
-          {
-            name: "description",
-            content: "The home page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The home page of the Meetup Website Clone."
-          }
-        ]
-      }
+        title: 'Home - Meetup',
+        metaTags: metaTags('home'),
+      },
     },
     {
-      path: "/attend",
-      name: "attend-meetup",
+      path: '/attend',
+      name: 'attend-meetup',
       component: () =>
         import(
-          /* webpackChunkName: "attend-meetup" */ "./views/AttendMeetup.vue"
+          /* webpackChunkName: "attend-meetup" */ './views/AttendMeetup.vue'
         ),
       meta: {
-        title: "Meetup | Attend Meetup",
-        metaTags: [
-          {
-            name: "description",
-            content: "The attend meetup page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The attend page of the Meetup Website Clone."
-          }
-        ]
-      }
+        title: 'Attend Meetup - Meetup',
+        metaTags: metaTags('attend meetup'),
+      },
     },
     {
-      path: "/find/:type",
-      name: "find-meetups",
+      path: '/find/:type',
+      name: 'find-meetups',
       component: () =>
         import(
-          /* webpackChunkName: "find-meetups" */ "./views/FindMeetups.vue"
+          /* webpackChunkName: "find-meetups" */ './views/FindMeetups.vue'
         ),
       props: true,
       meta: {
-        title: "Meetup | Find Meetups",
-        metaTags: [
-          {
-            name: "description",
-            content: "The find meetups page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The find meetups page of the Meetup Website Clone."
-          }
-        ]
-      }
+        title: 'Find Meetups - Meetup',
+        metaTags: metaTags('find meetups'),
+      },
     },
     {
-      path: "/group/:name",
-      name: "meetup-group",
+      path: '/group/:name',
+      component: () => import('./views/MeetupGroup.vue'),
+      children: [
+        {
+          path: '',
+          component: () => import('./components/meetup/group/AboutMeetup.vue'),
+          meta: {
+            title: '(Group name) About Meetup - Meetup',
+            metaTags: metaTags('about meetup section of group name'),
+          },
+        },
+        {
+          path: 'events',
+          component: () => import('./components/meetup/group/Events.vue'),
+          children: [
+            {
+              path: '',
+              component: () =>
+                import('./components/meetup/group/events/Upcoming.vue'),
+              meta: {
+                title: '(Group name) Upcoming Events - Meetup',
+                metaTags: metaTags('upcoming events section of group name'),
+              },
+            },
+            {
+              path: 'past',
+              component: () =>
+                import('./components/meetup/group/events/Past.vue'),
+              meta: {
+                title: '(Group name) Past Events - Meetup',
+                metaTags: metaTags('past events section of group name'),
+              },
+            },
+          ],
+        },
+        {
+          path: 'members',
+          component: () => import('./components/meetup/group/Members.vue'),
+          meta: {
+            title: '(Group name) Members - Meetup',
+            metaTags: metaTags('members section of group name'),
+          },
+        },
+        {
+          path: 'photos',
+          component: () => import('./components/meetup/group/Photos.vue'),
+          meta: {
+            title: '(Group name) Photos - Meetup',
+            metaTags: metaTags('photos section of group name'),
+          },
+        },
+        {
+          path: 'discussions',
+          component: () => import('./components/meetup/group/Discussions.vue'),
+          meta: {
+            title: '(Group name) Discussions - Meetup',
+            metaTags: metaTags('discussions section of group name'),
+          },
+        },
+      ],
+    },
+    {
+      path: '/create',
+      name: 'create-meetup',
       component: () =>
         import(
-          /* webpackChunkName: "meetup-group" */ "./views/MeetupGroup.vue"
+          /* webpackChunkName: "create-meetup" */ './views/CreateMeetup.vue'
         ),
       meta: {
-        title: "Meetup | Meetup Group",
-        metaTags: [
-          {
-            name: "description",
-            content: "The meetup group page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The meetup group page of the Meetup Website Clone."
-          }
-        ]
-      }
+        title: 'Create Meetup - Meetup',
+        metaTags: metaTags('create meetup'),
+      },
     },
     {
-      path: "/create",
-      name: "create-meetup",
+      path: '/accounts/signup',
+      name: 'signup',
       component: () =>
-        import(
-          /* webpackChunkName: "create-meetup" */ "./views/CreateMeetup.vue"
-        ),
+        import(/* webpackChunkName: "signup" */ './views/Signup.vue'),
       meta: {
-        title: "Meetup | Create Meetup",
-        metaTags: [
-          {
-            name: "description",
-            content: "The create meetup page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The create meetup page of the Meetup Website Clone."
-          }
-        ]
-      }
+        title: 'Create Account - Meetup',
+        metaTags: metaTags('sign up'),
+      },
     },
     {
-      path: "/accounts/signup",
-      name: "signup",
+      path: '/accounts/login',
+      name: 'login',
       component: () =>
-        import(/* webpackChunkName: "signup" */ "./views/Signup.vue"),
+        import(/* webpackChunkName: "login" */ './views/Login.vue'),
       meta: {
-        title: "Meetup | Create Account",
-        metaTags: [
-          {
-            name: "description",
-            content: "The sign up page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The sign up page of the Meetup Website Clone."
-          }
-        ]
-      }
+        title: 'Login to Account - Meetup',
+        metaTags: metaTags('log in'),
+      },
     },
-    {
-      path: "/accounts/login",
-      name: "login",
-      component: () =>
-        import(/* webpackChunkName: "login" */ "./views/Login.vue"),
-      meta: {
-        title: "Meetup | Login to Account",
-        metaTags: [
-          {
-            name: "description",
-            content: "The login page of the Meetup Website Clone."
-          },
-          {
-            property: "og:description",
-            content: "The login page of the Meetup Website Clone."
-          }
-        ]
-      }
-    }
-  ]
+  ],
 });
 
 router.beforeEach((to, from, next) => {
@@ -173,7 +173,7 @@ router.beforeEach((to, from, next) => {
   if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
 
   // Remove any stale meta tags from the document using the key attribute we set below.
-  Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map(
+  Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(
     el => el.parentNode.removeChild(el)
   );
 
@@ -183,14 +183,14 @@ router.beforeEach((to, from, next) => {
   // Turn the meta tag definitions into actual elements in the head.
   nearestWithMeta.meta.metaTags
     .map(tagDef => {
-      const tag = document.createElement("meta");
+      const tag = document.createElement('meta');
 
       Object.keys(tagDef).forEach(key => {
         tag.setAttribute(key, tagDef[key]);
       });
 
       // We use this to track which meta tags we create, so we don't interfere with other ones.
-      tag.setAttribute("data-vue-router-controlled", "");
+      tag.setAttribute('data-vue-router-controlled', '');
 
       return tag;
     })
