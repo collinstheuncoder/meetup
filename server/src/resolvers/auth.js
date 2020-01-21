@@ -94,6 +94,6 @@ function authToken(user) {
     jwt_encryption,
     {
       expiresIn: jwt_expiration,
-    }
+    },
   );
 }

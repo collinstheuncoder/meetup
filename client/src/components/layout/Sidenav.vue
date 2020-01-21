@@ -82,6 +82,7 @@ export default {
       this.closeSideNav();
     },
     logoutUser() {
+      this.hideSideNav();
       this.logout({ router: this.$router });
     }
   }
@@ -132,6 +133,10 @@ $main-color: #f13a59;
 
   a {
     color: #ffffff;
+  }
+
+  &--auth {
+    cursor: pointer;
   }
 }
 

@@ -144,3 +144,7 @@ export function handleActionStatus(commit, error = null) {
     commit("clearError", error, { root: true });
   }
 }
+
+export function formatErrors(errors) {
+  return errors.map(({ message }) => message);
+}

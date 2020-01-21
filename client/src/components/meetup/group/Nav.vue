@@ -33,9 +33,11 @@
   margin-top: 1.5rem;
   padding: 0 1.5rem;
   flex-direction: column-reverse;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
 
   @include largeDevices {
-    padding: 0.25rem 5rem;
+    padding: 0.25rem 27rem 0.25rem 5rem;
     flex-direction: row;
   }
 }
@@ -75,6 +77,12 @@
     align-self: flex-start;
     width: 100%;
 
+    @include largeDevices {
+      justify-content: flex-end;
+      align-self: center;
+      width: 60%;
+    }
+
     @at-root .button {
       border: 1px solid;
       border-radius: 0.125rem;
@@ -86,6 +94,10 @@
         background-color: $main-color;
         color: lighten($text-color, 100%);
         flex-basis: 80%;
+
+        @include largeDevices {
+          flex-basis: 40%;
+        }
       }
 
       &--report {

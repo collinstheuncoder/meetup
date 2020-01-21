@@ -1,7 +1,6 @@
 <template>
   <div class="meetup-group">
     <group-header />
-    <hr class="divider" />
     <group-nav />
     <div class="group-main">
       <div class="group-row">
@@ -35,11 +34,6 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/style";
 
-.divider {
-  border-bottom: none;
-  margin: 0;
-}
-
 .group {
   &-main {
     background-color: darken($white-color, 3%);
@@ -56,7 +50,9 @@ export default {
 
   &-column {
     &--main {
-      flex-basis: 70%;
+      @include largeDevices {
+        flex-basis: 70%;
+      }
     }
 
     &--upcoming {

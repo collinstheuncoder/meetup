@@ -2,8 +2,8 @@
   <div>
     <transition name="fade">
       <notification
-        v-show="errorMessage"
-        :message="errorMessage"
+        v-show="errorMessages[0]"
+        :message="errorMessages[0]"
         notification-type="error"
         :close-notification="closeNotification"
       />
@@ -51,6 +51,7 @@
 import { mapMutations } from "vuex";
 import Notification from "../shared/Notification";
 import { loginToAccount } from "@/graphql/mutations";
+import { formatErrors } from "@/helpers";
 
 export default {
   name: "login-form",
@@ -62,7 +63,7 @@ export default {
       email: "",
       password: "",
       successMessage: "",
-      errorMessage: ""
+      errorMessages: []
     };
   },
   methods: {
@@ -106,13 +107,15 @@ export default {
           this.$router.push("/");
         }
       } catch (error) {
-        this.errorMessage = error.message;
+        const errorMessages = formatErrors(error.graphQLErrors).map(error => error);
+
+        this.errorMessages = errorMessages;
         this.successMessage = null;
         this.notificationType = "error";
       }
     },
     closeNotification() {
-      this.errorMessage = null;
+      this.errorMessages = [];
       this.successMessage = null;
       this.notificationType = "";
     }

@@ -1,6 +1,6 @@
 <template>
   <section class="related-topics">
-    <p class="related-heading">Related topics</p>
+    <h3 class="heading">Related topics</h3>
     <template v-for="topic in relatedTopics">
       <router-link :to="topic.path" :key="topic.name" class="topic">{{
         topic.name
@@ -36,7 +36,7 @@ $btn-color: #f13a59;
 .related-topics {
 }
 
-.related-heading {
+.heading {
 }
 
 .topic {
