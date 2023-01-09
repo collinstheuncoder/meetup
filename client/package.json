@@ -33,7 +33,7 @@
     "axios": "^0.18.0",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
-    "luxon": "^1.10.0",
+    "luxon": "^1.28.1",
     "onclick-outside": "^0.1.1",
     "vue": "^2.5.21",
     "vue-apollo": "^3.0.0-beta.27",
